@@ -231,7 +231,7 @@ if __name__ == "__main__":
     # Generic function to display predictions for a few images
     #
     
-    def visualize_model(model, num_images=6):
+    def visualize_model(model, title, num_images=6):
         was_training = model.training
         model.eval()
         images_so_far = 0
@@ -296,7 +296,7 @@ if __name__ == "__main__":
     ######################################################################
     #
     
-    visualize_model(model_ft)
+    visualize_model(model_ft, 'Funetuning the convnet')
     
     
     ######################################################################
@@ -346,7 +346,7 @@ if __name__ == "__main__":
     ######################################################################
     #
     
-    visualize_model(model_conv)
+    visualize_model(model_conv, 'ConvNet as fixed feature extractor')
     
     # plt.ioff()
     # plt.show()
